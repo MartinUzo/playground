@@ -1,23 +1,17 @@
 package org.muz;
 
-import com.google.common.collect.Maps;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
+import com.google.common.collect.ImmutableMap;
 
 public class RomanNumberParser {
 
-    public static Map<Character, Integer> ROMAN_NUMBER_VALUE = Maps.newLinkedHashMap();
-
-    static {
-        ROMAN_NUMBER_VALUE.put('I', 1);
-        ROMAN_NUMBER_VALUE.put('V', 5);
-        ROMAN_NUMBER_VALUE.put('X', 10);
-        ROMAN_NUMBER_VALUE.put('L', 50);
-        ROMAN_NUMBER_VALUE.put('C', 100);
-        ROMAN_NUMBER_VALUE.put('D', 500);
-        ROMAN_NUMBER_VALUE.put('M', 1000);
-    }
+    public static ImmutableMap<Character, Integer> ROMAN_NUMBER_VALUE = ImmutableMap.<Character, Integer>builder()
+            .put('V', 5)
+            .put('X', 10)
+            .put('L', 50)
+            .put('C', 100)
+            .put('D', 500)
+            .put('M', 1000)
+            .build();
 
     public int parse(String romanNumber) {
         int result = 0;
