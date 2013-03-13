@@ -1,11 +1,13 @@
 package org.muz;
 
+import com.google.common.collect.Maps;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class RomanNumberParser {
 
-    public static Map<Character, Integer> ROMAN_NUMBER_VALUE = new LinkedHashMap<>();
+    public static Map<Character, Integer> ROMAN_NUMBER_VALUE = Maps.newLinkedHashMap();
 
     static {
         ROMAN_NUMBER_VALUE.put('I', 1);
