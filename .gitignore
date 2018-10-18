@@ -1,2 +1,4 @@
 /module1/.idea
 /module1/target
+.idea
+*.iml
